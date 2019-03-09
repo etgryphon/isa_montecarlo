@@ -1,0 +1,20 @@
+{
+  "name": "isa_montecarlo",
+  "version": "0.1.0",
+  "description": "Monte Carlo Simulator for ISAs",
+  "author": "Evin Grano <etgryphon@icloud.com>",
+  "license": "MIT",
+  "main": "simulator.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "NODE_ENV=development node ./simulator.js"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "lodash": "^4.17.11",
+    "mathjs": "^5.6.0",
+    "random-js": "^2.0.0-rc2",
+    "uuid": "^3.3.2"
+  }
+}
