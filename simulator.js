@@ -13,17 +13,26 @@ const Cohort = require(appRoot + '/objects/cohort');
 
 // TESTING
 var config = {
-    count: 100,
-    person: {
-        maleness: 0.5
+    count: 10,
+    cohort: {
+        count: 100,
+        person: {
+            maleness: 0.6
+        }
     }
 };
+// END - Testing
 
-// create a cohort
 
-var cohort = Cohort.Create(config);
 
-// get initial stats
-var statsReadable = cohort.GetReadableStats();
+for (var i = 0; i < config.count; i++) {
+    // create a cohort
+    var cohort = Cohort.Create(config.cohort);
 
-console.log(statsReadable);
+    // get initial stats
+    var statsReadable = cohort.GetReadableStats();
+
+    console.log(`Cohort #${i+1}:`);
+    console.log(statsReadable);
+}
+

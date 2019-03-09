@@ -32,13 +32,13 @@ var Cohort = {
         var stats = {}
         stats.persons = _.reduce(this._persons, function(sum, v, k){
             if (v.IsMale()){
-                sum.males = (sum.males || 0) + 1;
+                sum.males += 1;
             } else {
-                sum.females = (sum.females || 0) + 1;
+                sum.females += 1;
             }
 
             return sum;
-        }, {});
+        }, {males: 0, females: 0});
 
         // TODO: Other stats
 
